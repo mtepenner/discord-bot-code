@@ -6,8 +6,10 @@ from dotenv import load_dotenv
 from utils.database import init_db
 
 # Load environment variables
-load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
+if TOKEN is None:
+    # This helps us debug if the variable is missing entirely
+    print("CRITICAL ERROR: DISCORD_TOKEN variable is not set in Railway!")
 
 class MyBot(commands.Bot):
     def __init__(self):
