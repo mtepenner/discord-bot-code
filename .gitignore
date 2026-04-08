@@ -1,1 +1,21 @@
+# Secrets (CRITICAL: Never upload your token!)
+.env
 
+# Database (Prevents overwriting your Railway data with local test data)
+data/
+*.db
+*.sqlite3
+
+# Python messy files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# OS specific files
+.DS_Store
+Thumbs.db
